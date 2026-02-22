@@ -43,9 +43,10 @@ const portfolioData = {
             insights: "Developed a Random Forest model achieving 89% accuracy, allowing the business to proactively target at-risk customers with retention campaigns.",
             imagePlaceholder: "assets/images/project2.jpg",
             repoLink: "#",
-            liveLink: ""
+            liveLink: "#"
         }
     ]
 };
+
 
 
