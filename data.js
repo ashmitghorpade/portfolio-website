@@ -1,6 +1,3 @@
-// Central Data Configuration File
-// Edit this file to update the content on your portfolio website
-
 const portfolioData = {
     personal: {
         name: "Ashmit Ghorpade",
@@ -32,8 +29,8 @@ const portfolioData = {
             tools: ["Python", "Pandas", "Power BI", "SQL"],
             insights: "Discovered a 15% drop in retention due to shipping delays, proposing a localized inventory model that increases projected retention by 10%.",
             imagePlaceholder: "assets/images/project1.jpg",
-            repoLink: "#", // Update with your actual repo link
-            liveLink: "#"  // Optional live demo link
+            repoLink: "#",
+            liveLink: "#"  
         },
         {
             id: "project-2",
@@ -47,6 +44,7 @@ const portfolioData = {
         }
     ]
 };
+
 
 
 
