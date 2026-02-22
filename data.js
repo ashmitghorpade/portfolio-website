@@ -21,7 +21,7 @@ const portfolioData = {
             "I am currently looking for opportunities in Data Analyst, Business Analytics, or BI roles where I can leverage my technical skills and analytical mindset."
         ],
         skills: [
-            "SQL", "Python", "Power BI", "Tableau", "Excel", "Machine Learning", "Data Visualization", "Statistical Analysis"
+            "SQL", "Python", "R", "Power BI", "Excel", "Machine Learning", "Data Visualization", "Statistical Analysis", "Business Acumen and Problem Solving", "Storytelling with data"
         ]
     },
     projects: [
@@ -47,3 +47,4 @@ const portfolioData = {
         }
     ]
 };
+
