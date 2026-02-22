@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashmit Ghorpade | Data Analyst</title>
+    <meta name="description" content="Portfolio of Ashmit Ghorpade, Data Analyst based in Dublin.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <canvas id="network-canvas"></canvas>
+    <nav id="navbar" class="glass-nav">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo" id="nav-name">Name</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="#" class="btn-resume" id="nav-resume" target="_blank" rel="noopener noreferrer">Resume</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content fade-in">
+                <p class="hero-greeting">Hello, My Name Is</p>
+                <h1 id="hero-name" class="gradient-text">Name</h1>
+                <h2 id="hero-role" class="hero-role">Role</h2>
+                <p id="hero-tagline" class="hero-tagline">Tagline</p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section-padding">
+            <div class="section-header fade-in">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content fade-in">
+                <div class="about-text" id="about-text-container">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="about-skills-wrapper">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid" id="about-skills">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section-padding">
+            <div class="section-header fade-in">
+                <h2>Featured Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid fade-in" id="projects-grid">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="section-header fade-in">
+                <h2>Get In Touch</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content fade-in">
+                <p class="contact-subtitle">I'm currently looking for new opportunities. Whether you have a question or
+                    just want to say hi, I'll make sure to get back to you!</p>
+                <a href="mailto:ashmitghorpade@gmail.com" id="contact-email" class="btn btn-primary btn-large"
+                    target="_blank">Say
+                    Hello</a>
+                <div class="social-links mt-4">
+                    <a href="#" id="social-linkedin" target="_blank" aria-label="LinkedIn" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-linkedin">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" id="social-github" target="_blank" aria-label="GitHub" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-github">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built by <span id="footer-name">Ashmit Ghorpade</span>. Designed for impact.</p>
+    </footer>
+
+    <!-- Load Data and Logic -->
+    <script src="data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
