@@ -1,31 +1,22 @@
-// script.js - Logic to inject data and handle interactions
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Inject Data from data.js
     if (typeof portfolioData !== 'undefined') {
         loadData(portfolioData);
     } else {
         console.error("portfolioData not found. Please ensure data.js is loaded.");
     }
 
-    // 2. Initialize UI Interactions
     initNavbarScrolled();
     initMobileMenu();
     initScrollAnimations();
 
-    // 3. Initialize Advanced Animations
     initNetworkCanvas();
     if (typeof portfolioData !== 'undefined') {
         initTypewriterEffect(portfolioData.personal.role);
     }
 });
 
-/**
- * Parses portfolioData and injects it into the DOM
- */
 function loadData(data) {
-    // --- Navigation & Hero ---
     document.title = `${data.personal.name} | ${data.personal.role}`;
     document.getElementById('nav-name').textContent = data.personal.name.split(' ')[0]; // First name for logo
     document.getElementById('nav-resume').href = data.personal.resumeLink;
@@ -34,7 +25,6 @@ function loadData(data) {
     document.getElementById('hero-role').textContent = data.personal.role;
     document.getElementById('hero-tagline').textContent = data.personal.tagline;
 
-    // --- About Section ---
     const aboutContainer = document.getElementById('about-text-container');
     data.about.paragraphs.forEach(pText => {
         const p = document.createElement('p');
@@ -50,16 +40,13 @@ function loadData(data) {
         skillsContainer.appendChild(span);
     });
 
-    // --- Projects Section ---
     const projectsGrid = document.getElementById('projects-grid');
     data.projects.forEach(project => {
         const card = document.createElement('div');
         card.className = 'project-card';
 
-        // Format tools
         const toolsHtml = project.tools.map(tool => `<span>${tool}</span>`).join('');
 
-        // Format links
         let linksHtml = '';
         if (project.repoLink) {
             linksHtml += `<a href="${project.repoLink}" target="_blank" rel="noopener noreferrer">
@@ -89,16 +76,12 @@ function loadData(data) {
         projectsGrid.appendChild(card);
     });
 
-    // --- Contact Section ---
     document.getElementById('contact-email').href = `mailto:${data.personal.email}`;
     document.getElementById('social-linkedin').href = data.socialLinks.linkedin;
     document.getElementById('social-github').href = data.socialLinks.github;
     document.getElementById('footer-name').textContent = data.personal.name;
 }
 
-/**
- * Handle navbar styling on scroll
- */
 function initNavbarScrolled() {
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
@@ -112,9 +95,6 @@ function initNavbarScrolled() {
     });
 }
 
-/**
- * Handle mobile menu toggle
- */
 function initMobileMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -122,11 +102,9 @@ function initMobileMenu() {
 
     hamburger.addEventListener('click', () => {
         navLinks.classList.toggle('active');
-        // Simple animation for hamburger
         hamburger.classList.toggle('toggle');
     });
 
-    // Close menu when clicking a link
     links.forEach(link => {
         link.addEventListener('click', () => {
             navLinks.classList.remove('active');
@@ -135,9 +113,6 @@ function initMobileMenu() {
     });
 }
 
-/**
- * Advanced scroll animations using Intersection Observer
- */
 function initScrollAnimations() {
     const faders = document.querySelectorAll('.fade-in');
 
@@ -159,18 +134,14 @@ function initScrollAnimations() {
     });
 }
 
-/**
- * Typewriter effect for the hero role
- */
 function initTypewriterEffect(text) {
     const roleElement = document.getElementById('hero-role');
     if (!roleElement) return;
-    roleElement.innerHTML = ''; // clear initial text
+    roleElement.innerHTML = '';
 
     let i = 0;
-    const speed = 75; // ms per char
+    const speed = 75;
 
-    // Add blinking cursor
     const cursor = document.createElement('span');
     cursor.className = 'typewriter-cursor';
 
@@ -187,9 +158,6 @@ function initTypewriterEffect(text) {
     setTimeout(typeWriter, 800); // Wait 0.8s before starting
 }
 
-/**
- * Lightweight, subtle interactive data network background
- */
 function initNetworkCanvas() {
     const canvas = document.getElementById('network-canvas');
     if (!canvas) return;
@@ -226,7 +194,6 @@ function initNetworkCanvas() {
         }
     }
 
-    // Density calculation for responsiveness
     function initParticles() {
         const particleCount = Math.min(Math.floor(window.innerWidth / 15), 100);
         particles = Array.from({ length: particleCount }, () => new Particle());
@@ -257,7 +224,7 @@ function initNetworkCanvas() {
 
                 if (dist < 120) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(56, 189, 248, ${0.12 - dist / 1000})`; // Faint connections
+                    ctx.strokeStyle = `rgba(56, 189, 248, ${0.12 - dist / 1000})`;
                     ctx.lineWidth = 0.5;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(particles[j].x, particles[j].y);
@@ -265,14 +232,13 @@ function initNetworkCanvas() {
                 }
             }
 
-            // Mouse interaction
             if (mouse.x != null && mouse.y != null) {
                 const dx = particles[i].x - mouse.x;
                 const dy = particles[i].y - mouse.y;
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < mouse.radius) {
                     ctx.beginPath();
-                    ctx.strokeStyle = `rgba(56, 189, 248, ${0.3 - dist / 500})`; // Stronger line to cursor
+                    ctx.strokeStyle = `rgba(56, 189, 248, ${0.3 - dist / 500})`;
                     ctx.lineWidth = 0.8;
                     ctx.moveTo(particles[i].x, particles[i].y);
                     ctx.lineTo(mouse.x, mouse.y);
