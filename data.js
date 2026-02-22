@@ -24,7 +24,7 @@ const portfolioData = {
     projects: [
         {
             id: "project-1",
-            title: "E-Commerce Sales Analysis",
+            title: "Diabetes Risk Prediction using Machine Learning",
             problem: "Identify key drivers of revenue loss in regional quarterly sales.",
             tools: ["Python", "Pandas", "Power BI", "SQL"],
             insights: "Discovered a 15% drop in retention due to shipping delays, proposing a localized inventory model that increases projected retention by 10%.",
@@ -44,6 +44,7 @@ const portfolioData = {
         }
     ]
 };
+
 
 
 
