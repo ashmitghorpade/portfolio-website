@@ -28,7 +28,7 @@ const portfolioData = {
             problem: "Identify key drivers of revenue loss in regional quarterly sales.",
             tools: ["Python", "Pandas", "Power BI", "SQL"],
             insights: "Discovered a 15% drop in retention due to shipping delays, proposing a localized inventory model that increases projected retention by 10%.",
-            imagePlaceholder: "assets/images/project1.jpg",
+            imagePlaceholder: "assets/ROC curve.png",
             repoLink: "#",
             liveLink: "#"  
         },
@@ -44,6 +44,7 @@ const portfolioData = {
         }
     ]
 };
+
 
 
 
