@@ -25,9 +25,9 @@ const portfolioData = {
         {
             id: "project-1",
             title: "Diabetes Risk Prediction using Machine Learning",
-            problem: "Correcting class imbalance using SMOTE significantly improved minority class detection performance. Feature relationship analysis identified Glucose as the dominant predictive variable influencing classification outcomes. The tuned model achieved strong discrimination capability with an AUC score of 0.81.",
+            problem: "Developed a predictive analytics solution to model diabetes occurrence using structured clinical data. The project focused on addressing real-world data challenges including missing values, feature scaling, and severe class imbalance to improve prediction reliability.",
             tools: ["Python", "Scikit-Learn", "Matplotlib", "Seaborn", "SMOTE", "Random Forest", "XGBoost", "Data Preprocessing", "Feature Scaling"],
-            insights: "Discovered a 15% drop in retention due to shipping delays, proposing a localized inventory model that increases projected retention by 10%.",
+            insights: "Correcting class imbalance using SMOTE significantly improved minority class detection performance. Feature relationship analysis identified Glucose as the dominant predictive variable influencing classification outcomes. The tuned model achieved strong discrimination capability with an AUC score of 0.81.",
             imagePlaceholder: "assets/ROC curve.png",
             repoLink: "#", 
         },
@@ -42,6 +42,7 @@ const portfolioData = {
         }
     ]
 };
+
 
 
 
