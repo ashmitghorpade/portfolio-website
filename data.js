@@ -5,7 +5,7 @@ const portfolioData = {
         tagline: "Uncovering insights through data and analytics to drive strategic decisions.",
         email: "ashmitghorpade@gmail.com",
         location: "Dublin, Ireland",
-        resumeLink: "assets/resume.pdf"
+        resumeLink: "assets/Ashmit Ghorpade Grad Resume.pdf"
     },
     socialLinks: {
         linkedin: "https://www.linkedin.com/in/ashmit-ghorpade-a85725230/",
@@ -33,6 +33,7 @@ const portfolioData = {
         }
     ]
 };
+
 
 
 
