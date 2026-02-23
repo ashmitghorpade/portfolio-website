@@ -29,7 +29,7 @@ const portfolioData = {
             tools: ["Python", "Scikit-Learn", "Matplotlib", "Seaborn", "SMOTE", "Random Forest", "XGBoost", "Data Preprocessing", "Feature Scaling"],
             insights: "Correcting class imbalance using SMOTE significantly improved minority class detection performance. Feature relationship analysis identified Glucose as the dominant predictive variable influencing classification outcomes. The tuned model achieved strong discrimination capability with an AUC score of 0.81.",
             imagePlaceholder: "assets/diabetes ML.jpeg",
-            repoLink: "#", 
+            repoLink: "https://github.com/ashmitghorpadeag/Diabetes-Risk-Prediction-using-Machine-Learning", 
         },
         {
             id: "project-2",
@@ -42,6 +42,7 @@ const portfolioData = {
         }
     ]
 };
+
 
 
 
