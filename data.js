@@ -29,8 +29,7 @@ const portfolioData = {
             tools: ["Python", "Scikit-Learn", "Matplotlib", "Seaborn", "SMOTE", "Random Forest", "XGBoost", "Data Preprocessing", "Feature Scaling"],
             insights: "Discovered a 15% drop in retention due to shipping delays, proposing a localized inventory model that increases projected retention by 10%.",
             imagePlaceholder: "assets/ROC curve.png",
-            repoLink: "#",
-            liveLink: "#"  
+            repoLink: "#", 
         },
         {
             id: "project-2",
@@ -43,6 +42,7 @@ const portfolioData = {
         }
     ]
 };
+
 
 
 
